@@ -3,10 +3,9 @@ Spring Boot 2.1 And Angular 8 starter
 
 -----
 
-This is a multi-module Spring Boot Angular Maven starter app with good defaults.
+This is a multi-module Spring Boot Angular Maven project that allows to create archetype.
 The frontend Angular app is built using [angular-cli](https://cli.angular.io/). The project packages Angular application code as a [WebJar](https://www.webjars.org/). This project is geared towards building monolithic applications. I have also written [a blog that explains step by step how to create this starter project](https://shekhargulati.com/2017/11/08/a-minimalist-guide-to-building-spring-boot-angular-5-applications/).
 
-This project provides productive setup for building Spring Boot Angular applications. The application is divided into two Maven modules:
 
 1. `backend`: This contains Java code of the application.
 2. `frontend`: This contains source code for the Angular based frontend.
@@ -18,16 +17,27 @@ This project uses following versions:
 3. Node v12.4.0
 4. Npm v6.9.0
 
-## Running the full application
+#Create new project
 
-You can build the package as a single artifact by running the `./mvnw clean install`.
-Next, you can run the application by executing:
+### 1. Generating archetype
 
-```bash
-$ java -jar backend/target/ngboot-app.jar
+In root of project run
+```
+1. mvn archetype:create-from-project -Darchetype.filteredExtensions=java
+2. cd target/generated-sources/archetype/
+3. mvn install
 ```
 
-The application will be accessible at `http://localhost:8080`.
+### 2. Use generated archetype to create new project
+
+```
+1. Create folder for your project example: mkdir /tmp/archetype/
+2. Change directory to created folder example: cd /tmp/archetype/
+3. mvn archetype:generate -DarchetypeCatalog=local
+4. Choose com.akulinski.springbootstarter:spring-boot-angular-starter-archetype 
+5. Enter data needed for project generation 
+6. Voilà 
+```
 
 ## Features
 
