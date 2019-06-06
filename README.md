@@ -1,5 +1,5 @@
 
-##Based on shekhargulati starter 
+# Based on shekhargulati starter 
 -----
 
 This is a multi-module Spring Boot Angular Maven project that allows to create archetype.
@@ -16,7 +16,7 @@ This project uses following versions:
 3. Node v12.4.0
 4. Npm v6.9.0
 
-##Create new project
+# Create new project
 
 ### 1. Generating archetype
 
