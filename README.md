@@ -1,4 +1,6 @@
-spring-boot-maven-angular-starter ![Build Status](https://travis-ci.org/shekhargulati/spring-boot-maven-angular-starter.svg?branch=master)
+
+Spring Boot 2.1 And Angular 8 starter
+
 -----
 
 This is a multi-module Spring Boot Angular Maven starter app with good defaults.
@@ -11,10 +13,10 @@ This project provides productive setup for building Spring Boot Angular applicat
 
 This project uses following versions:
 
-1. Spring Boot v1.5.9
-2. Angular v5.0.4
-3. Node v8.9.0
-4. Yarn v1.3.2
+1. Spring Boot v2.1.5
+2. Angular v8.0.0
+3. Node v12.4.0
+4. Npm v6.9.0
 
 ## Running the full application
 
@@ -33,13 +35,12 @@ This starter comes bundled with the following features:
 
 1. Multi module Maven project: A multi module project to modularize backend and frontend code separately.
 2. Maven wrapper: So, you don't need to install Maven on your machine.
-3. Checkstyle: Enforce sane coding standard guidelines.
-4. ErrorProne: Find errors in your code.
-5. Frontend packaged as a WebJar.
-6. CORS enabled: A global configuration is added to enable CORS so that frontend can work seamlessly with backend during development.
-7. REST API base path: Sets the base REST API path to `/api`. You can configure it by changing `rest.api.base.path` property.
-8. Maven release plugin
-9. CI: The project is preconfigured to use TravisCI as continuous integration server.
+3. ErrorProne: Find errors in your code.
+4. Frontend packaged as a WebJar.
+5. CORS enabled: A global configuration is added to enable CORS so that frontend can work seamlessly with backend during development.
+6. REST API base path: Sets the base REST API path to `/api`. You can configure it by changing `rest.api.base.path` property.
+7. Maven release plugin
+8. CI: The project is preconfigured to use TravisCI as continuous integration server.
 
 ## Running the backend for development mode
 
@@ -54,18 +55,10 @@ $  ../mvnw spring-boot:run
 ```
 
 ## Running the frontend for development mode
-
-Make sure to install [yarn on your development machine](https://yarnpkg.com/en/docs/install).
-
-To install all the required binaries for your project, you can run following command.
-
 ```
 $ cd frontend
-$ ../mvnw frontend:install-node-and-yarn frontend:yarn
+$ ng serve 
 ```
-
-Once the above command finishes, you can start the frontend using the `yarn start` command.
-
 ## Hot reloading
 
 Both the front-end and back-end modules support hot reloading.

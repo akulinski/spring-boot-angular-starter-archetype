@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>spring-boot-angular-starter</artifactId>
-    <groupId>com.shekhargulati.starters.ngboot</groupId>
-    <version>0.2.0-SNAPSHOT</version>
+    <groupId>com.akulinski.springbootstarter</groupId>
+    <version>1.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -24,56 +25,57 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.6</version>
+        <version>1.7.6</version>
         <configuration>
-          <nodeVersion>v8.9.0</nodeVersion>
-          <yarnVersion>v1.3.2</yarnVersion>
+          <nodeVersion>v12.4.0</nodeVersion>
+          <npmVersion>6.9.0</npmVersion>
         </configuration>
         <executions>
+
           <execution>
-            <id>install node and yarn</id>
+            <id>install node and npm</id>
             <goals>
-              <goal>install-node-and-yarn</goal>
+              <goal>install-node-and-npm</goal>
             </goals>
             <phase>generate-resources</phase>
           </execution>
+
           <execution>
-            <id>yarn install</id>
+            <id>npm install</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>npm</goal>
             </goals>
             <configuration>
               <arguments>install</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>yarn lint</id>
+            <id>npm lint</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>npm</goal>
             </goals>
             <configuration>
-              <arguments>lint</arguments>
+              <arguments>run-script lint</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>yarn build</id>
+            <id>npm build</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>npm</goal>
             </goals>
             <phase>generate-resources</phase>
             <configuration>
-              <arguments>build</arguments>
+              <arguments>run-script build</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>yarn test</id>
+            <id>npm test</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>npm</goal>
             </goals>
             <phase>test</phase>
             <configuration>
-              <arguments>test</arguments>
-              <failOnError>true</failOnError>
+              <arguments>run-script test</arguments>
             </configuration>
           </execution>
         </executions>
